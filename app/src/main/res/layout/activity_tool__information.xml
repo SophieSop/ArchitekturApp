@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="studienprojekt.normann.marc.citygen.Tool_Information">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:paddingTop="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_description_tools" />
+
+
+            <ScrollView
+                android:id="@+id/scrollView_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_orange">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txt_ind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="@string/txt_individual_level"
+                            android:textColor="@android:color/white" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_modul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_modul"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_modul" />
+
+                        <ImageButton
+                            android:id="@+id/info_modul"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_universal_space_concept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_universal_space_concept"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_universal_space_concept" />
+
+                        <ImageButton
+                            android:id="@+id/info_universal_space_concept"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_survival_logic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_survival_logic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_survival_logic" />
+
+                        <ImageButton
+                            android:id="@+id/info_survival_logic"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_barriers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_barriers"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_barriers" />
+
+                        <ImageButton
+                            android:id="@+id/info_barriers"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_materials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_materials"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_materials" />
+
+                        <ImageButton
+                            android:id="@+id/info_materials"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_self_similarity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_self_similarity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_self_similarity" />
+
+                        <ImageButton
+                            android:id="@+id/info_self_similarity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_building_structure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_building_structure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_building_structure" />
+
+                        <ImageButton
+                            android:id="@+id/info_building_structure"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_places"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_places"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_places" />
+
+                        <ImageButton
+                            android:id="@+id/info_places"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_magenta">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txt_nb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="@string/txt_neighborhood_level"
+                            android:textColor="@android:color/white" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_possession_property"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_possession_property"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_possession_property" />
+
+                        <ImageButton
+                            android:id="@+id/info_possession_property"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_dynamics_of_user_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_dynamics_of_user_group"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_dynamics_of_user_group" />
+
+                        <ImageButton
+                            android:id="@+id/info_dynamics_of_user_group"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_infrastructure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_infrastructure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_infrastructur" />
+
+                        <ImageButton
+                            android:id="@+id/info_infrastructure"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_social_structure_principles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_social_structure_principles"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_social_structure_principles" />
+
+                        <ImageButton
+                            android:id="@+id/info_social_structure_principles"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_distribution_accumulation_of_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_distribution_accumulation_of_power"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_distribution_accumulation_of_power" />
+
+                        <ImageButton
+                            android:id="@+id/info_distribution_accumulation_of_power"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_community_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_community_area"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_community_area" />
+
+                        <ImageButton
+                            android:id="@+id/info_community_area"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_strategy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_strategy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_strategy" />
+
+                        <ImageButton
+                            android:id="@+id/info_strategy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_placeholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_placeholder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_placeholder" />
+
+                        <ImageButton
+                            android:id="@+id/info_placeholder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_spatial_structure_principles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_spatial_structure_principles"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_spatial_structure_principles" />
+
+                        <ImageButton
+                            android:id="@+id/info_spatial_structure_principles"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_interventions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_interventions"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_interventions" />
+
+                        <ImageButton
+                            android:id="@+id/info_interventions"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_flexibility_room_structure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_flexibility_room_structure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_flexibility_room_structure" />
+
+                        <ImageButton
+                            android:id="@+id/info_flexibility_room_structure"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_interference_usage_pattern"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_interference_usage_pattern"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_interference_usage_pattern" />
+
+                        <ImageButton
+                            android:id="@+id/info_interference_usage_pattern"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_respect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_respect"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_respect" />
+
+                        <ImageButton
+                            android:id="@+id/info_respect"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_red">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txt_fd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="@string/txt_city_level"
+                            android:textColor="@android:color/white" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_developmentarea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_developmentarea"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_developmentarea" />
+
+                        <ImageButton
+                            android:id="@+id/info_developmentarea"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_spots"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_spots"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/btn_spots" />
+
+                        <ImageButton
+                            android:id="@+id/info_spots"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_networking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_networking"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="@string/networking" />
+
+                        <ImageButton
+                            android:id="@+id/info_networking"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
+
+
+        </GridLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_submit_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="goOn"
+        android:text="@string/btn_submit"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout" />
+
+
+</android.support.constraint.ConstraintLayout>

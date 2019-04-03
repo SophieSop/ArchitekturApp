@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- at the moment not implemented
+    <item
+        android:id="@+id/menu_pg"
+        android:title="@string/menu_pg"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_help"
+        android:title="@string/menu_help"
+        app:showAsAction="never" />
+    -->
+    <item
+        android:id="@+id/menu_restartSession"
+        android:title="@string/menu_restartSession"
+        app:showAsAction="never" />
+
+</menu>

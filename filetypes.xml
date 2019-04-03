@@ -1,0 +1,29 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="modul" type="PLAIN_TEXT" />
+      <mapping pattern="spots_landmarks" type="PLAIN_TEXT" />
+      <mapping pattern="space_teach_concepts" type="PLAIN_TEXT" />
+      <mapping pattern="networking" type="PLAIN_TEXT" />
+      <mapping pattern="infrastructur" type="PLAIN_TEXT" />
+      <mapping pattern="interference_usage_patterns" type="PLAIN_TEXT" />
+      <mapping pattern="interventions" type="PLAIN_TEXT" />
+      <mapping pattern="social_structure_principles" type="PLAIN_TEXT" />
+      <mapping pattern="dynamics_user-group" type="PLAIN_TEXT" />
+      <mapping pattern="community_area" type="PLAIN_TEXT" />
+      <mapping pattern="distribution_accumulation_of_power" type="PLAIN_TEXT" />
+      <mapping pattern="flexibility_room_structure" type="PLAIN_TEXT" />
+      <mapping pattern="possession_property" type="PLAIN_TEXT" />
+      <mapping pattern="placeholder" type="PLAIN_TEXT" />
+      <mapping pattern="respect" type="PLAIN_TEXT" />
+      <mapping pattern="spatial_structure_principles" type="PLAIN_TEXT" />
+      <mapping pattern="building_structure" type="PLAIN_TEXT" />
+      <mapping pattern="survival_logic" type="PLAIN_TEXT" />
+      <mapping pattern="self_similarity" type="PLAIN_TEXT" />
+      <mapping pattern="strategy" type="PLAIN_TEXT" />
+      <mapping pattern="materials" type="PLAIN_TEXT" />
+      <mapping pattern="places" type="PLAIN_TEXT" />
+      <mapping pattern="barriers" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>
