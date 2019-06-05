@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:columnCount="3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="createAlternative"
+        android:text="HashMap" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_margin="10dp"
+        android:text="Bilder" />
+
+    <TextView
+        android:id="@+id/tv_Tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Tools"/>
+
+    <ImageView
+        android:id="@+id/pic_barriers"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:srcCompat="@drawable/barriers" />
+    <ImageView
+        android:id="@+id/pic_universal_space_concept"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/universal_space_concept" />
+    <ImageView
+        android:id="@+id/pic_spots"
+        android:visibility="gone"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/spots" />
+
+    <ImageView
+        android:id="@+id/pic_modul"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/barriers" />
+    <ImageView
+        android:id="@+id/pic_building_structure"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/building_structure" />
+    <ImageView
+        android:id="@+id/pic_placeholder"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/placeholder" />
+
+    <ImageView
+        android:id="@+id/pic_survival_logic"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/barriers" />
+    <ImageView
+        android:id="@+id/pic_infrastructure"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/infrastructure" />
+    <ImageView
+        android:id="@+id/pic_interference_usage_pattern"
+        android:layout_width="150px"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/interference_usage_pattern" />
+</GridLayout>
