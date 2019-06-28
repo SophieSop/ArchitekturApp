@@ -82,38 +82,10 @@ public class Animation extends AppCompatActivity {
                 R.drawable.barrieren_mehrfach_abknickende_durchgaenge,
         };
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_animation_new_new);
 
-            RecyclerView recyclerView = (RecyclerView)findViewById(R.id.pics);
-            recyclerView.setHasFixedSize(true);
-
-            RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),5);
-            recyclerView.setLayoutManager(layoutManager);
-
-            ArrayList<Pics_Liste> createLists = prepareData();
-            Pics_Adapter adapter = new Pics_Adapter(getApplicationContext(), createLists);
-            recyclerView.setAdapter(adapter);
-
-
-        }
-        private ArrayList<Pics_Liste> prepareData(){
-
-            ArrayList<Pics_Liste> theimage = new ArrayList<>();
-            for(int i = 0; i< image_titles.length; i++){
-                Pics_Liste createList = new Pics_Liste();
-                createList.setImage_title(image_titles[i]);
-                createList.setImage_ID(image_ids[i]);
-                theimage.add(createList);
-            }
-            return theimage;
-        }
-/*
     HashMap<String, HashMap<String, String>> tools;
 
-*/
+
     /*
     private int count;
     HashMap<String, HashMap<String, String>> tools;
@@ -132,10 +104,10 @@ public class Animation extends AppCompatActivity {
             R.id.J1, R.id.J2, R.id.J3, R.id.J4, R.id.J5,
     };
     */
-/*    @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation_new);
+        setContentView(R.layout.activity_animation_new_new);
 
        try {
             Intent intent = getIntent();
@@ -148,7 +120,7 @@ public class Animation extends AppCompatActivity {
             dataDirPath = p.applicationInfo.dataDir;
             Log.d("INFO","DataDir: "+dataDirPath);
              */
-/*        } catch (Exception e) {
+        } catch (Exception e) {
            Log.w("ERROR", "Error Message: ", e);
        }
         TextView Tools = (TextView)findViewById(R.id.tv_Tools);
@@ -157,6 +129,16 @@ public class Animation extends AppCompatActivity {
     }
 
     public void onClick(View v) {
+
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.pics);
+        recyclerView.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),5);
+        recyclerView.setLayoutManager(layoutManager);
+
+        ArrayList<Pics_Liste> createLists = prepareData();
+        Pics_Adapter adapter = new Pics_Adapter(getApplicationContext(), createLists);
+        recyclerView.setAdapter(adapter);
 
         // Create a HashMap object
         HashMap<String, String> pics = new HashMap<String, String>();
@@ -168,12 +150,24 @@ public class Animation extends AppCompatActivity {
         pics.put("USA", "Washington DC");
 
 
-        ImageView Barriers = (ImageView)findViewById(R.id.pic_barriers);
+     //   ImageView Barriers = (ImageView)findViewById(R.id.pic_barriers);
 
 
-        if (tools.toString().contains("barriers")) {
-            Barriers.setVisibility(View.VISIBLE);
+       // if (tools.toString().contains("barriers")) {
+         //   Barriers.setVisibility(View.VISIBLE);
+       // }
+    }
+
+    private ArrayList<Pics_Liste> prepareData(){
+
+        ArrayList<Pics_Liste> theimage = new ArrayList<>();
+        for(int i = 0; i< image_titles.length; i++){
+            Pics_Liste createList = new Pics_Liste();
+            createList.setImage_title(image_titles[i]);
+            createList.setImage_ID(image_ids[i]);
+            theimage.add(createList);
         }
+        return theimage;
     }
 
     public void createAlternative(View view){
@@ -196,7 +190,7 @@ public class Animation extends AppCompatActivity {
         intent.putExtra("info", information);
         intent.putExtra("tools", tools);
         startActivity(intent);
-*/
+
         /*
          * Only to test the prolog integration.
 
@@ -299,13 +293,13 @@ public class Animation extends AppCompatActivity {
     }
 
      */
-/*
+
     public void goOn(View view){
         Intent intent = new Intent(this, Tool_Information.class);
         //disable the .putExtra if tools should be refreshed/deleted after the animation
         intent.putExtra("tools", tools);
         startActivity(intent);
     }
-    */
-//}
+
+}
 
