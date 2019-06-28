@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ArchitekturApp.iml" filepath="$PROJECT_DIR$/ArchitekturApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MarcNormann-citygen-2e159bd52688.iml" filepath="$PROJECT_DIR$/MarcNormann-citygen-2e159bd52688.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

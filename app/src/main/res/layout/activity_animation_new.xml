@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="30dp"
-    android:columnCount="3"
+    android:columnCount="2"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Button
@@ -22,6 +22,16 @@
         android:layout_margin="10dp"
         android:text="Bilder" />
 
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="goOn"
+        android:text="@string/btn_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/tv_Tools"
         android:layout_width="wrap_content"
@@ -31,58 +41,9 @@
 
     <ImageView
         android:id="@+id/pic_barriers"
-        android:layout_width="150px"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:srcCompat="@drawable/barriers" />
-    <ImageView
-        android:id="@+id/pic_universal_space_concept"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/universal_space_concept" />
-    <ImageView
-        android:id="@+id/pic_spots"
-        android:visibility="gone"
-        android:layout_width="150px"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/spots" />
+        app:srcCompat="@drawable/barrieren_mehrfach_abknickende_durchgaenge" />
 
-    <ImageView
-        android:id="@+id/pic_modul"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/barriers" />
-    <ImageView
-        android:id="@+id/pic_building_structure"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/building_structure" />
-    <ImageView
-        android:id="@+id/pic_placeholder"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/placeholder" />
-
-    <ImageView
-        android:id="@+id/pic_survival_logic"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/barriers" />
-    <ImageView
-        android:id="@+id/pic_infrastructure"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/infrastructure" />
-    <ImageView
-        android:id="@+id/pic_interference_usage_pattern"
-        android:layout_width="150px"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/interference_usage_pattern" />
 </GridLayout>

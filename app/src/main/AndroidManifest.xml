@@ -27,6 +27,13 @@
                 android:value=".Tool_Information" />
         </activity>
         <activity
+            android:name=".Person"
+            android:parentActivityName=".Tool_Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tool_Information" />
+        </activity>
+        <activity
             android:name=".Barriers"
             android:parentActivityName=".Tool_Information">
             <meta-data

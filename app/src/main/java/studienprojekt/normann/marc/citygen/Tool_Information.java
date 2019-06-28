@@ -132,6 +132,8 @@ public class Tool_Information extends AppCompatActivity {
             String btnId = getName(view);
             Intent intent = null;
             switch (btnId){
+                case "person":
+                    intent = new Intent(this, Person.class); break;
                 case "barriers":
                     intent = new Intent(this, Barriers.class); break;
                 case "building_structure":
