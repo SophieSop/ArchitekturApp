@@ -140,16 +140,6 @@ public class Animation extends AppCompatActivity {
         Pics_Adapter adapter = new Pics_Adapter(getApplicationContext(), createLists);
         recyclerView.setAdapter(adapter);
 
-        // Create a HashMap object
-        HashMap<String, String> pics = new HashMap<String, String>();
-
-        // Add keys and values
-        pics.put("England", "London");
-        pics.put("Germany", "Berlin");
-        pics.put("Norway", "Oslo");
-        pics.put("USA", "Washington DC");
-
-
      //   ImageView Barriers = (ImageView)findViewById(R.id.pic_barriers);
 
 
