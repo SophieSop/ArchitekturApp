@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -30,10 +28,8 @@ public class Pics_Adapter extends RecyclerView.Adapter<Pics_Adapter.ViewHolder> 
     @Override
     public void onBindViewHolder(Pics_Adapter.ViewHolder viewHolder, int i) {
 
-        viewHolder.title.setText(galleryList.get(i).getImage_title());
         viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         viewHolder.img.setImageResource((galleryList.get(i).getImage_ID()));
-        //Picasso.with(context).load(galleryList.get(i).getImage_ID()).resize(240, 120).into(viewHolder.img);
         viewHolder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,12 +44,10 @@ public class Pics_Adapter extends RecyclerView.Adapter<Pics_Adapter.ViewHolder> 
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView title;
         private ImageView img;
         public ViewHolder(View view) {
             super(view);
 
-            title = (TextView)view.findViewById(R.id.title);
             img = (ImageView) view.findViewById(R.id.pic);
         }
     }

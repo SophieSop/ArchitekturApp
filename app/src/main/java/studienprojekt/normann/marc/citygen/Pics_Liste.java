@@ -2,16 +2,8 @@ package studienprojekt.normann.marc.citygen;
 
 public class Pics_Liste {
 
-    private String image_title;
     private Integer image_id;
 
-    public String getImage_title() {
-        return image_title;
-    }
-
-    public void setImage_title(String android_version_name) {
-        this.image_title = android_version_name;
-    }
 
     public Integer getImage_ID() {
         return image_id;

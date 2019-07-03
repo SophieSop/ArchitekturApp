@@ -27,60 +27,124 @@ import java.util.HashMap;
 
 public class Animation extends AppCompatActivity {
 
-        private final String image_titles[] = {
-                "Img1",
-                "Img2",
-                "Img3",
-                "Img4",
-                "Img5",
-                "Img6",
-                "Img7",
-                "Img8",
-                "Img9",
-                "Img10",
+    private final String image_rules[] = {
+        //Barriers
+            "barriersVisualCover(ng1).",
+            "barriersKinkingPassage(ng1).",
+        //Building Structure
+            "trailer(ng1).",
+            "useStock(ng1).",
+        //Dynamic of user group
+            //"userGroupFlexibility(ng1).",
+            //"privateRoom(ng1).",
+        //Infrastructure
+            "infrastructureStreets(ng1).",
+            "infrastructurePaths(ng1).",
+            "infrastructureBicyclePath(ng1).",
+            "infrastructureWoodsAndSees(ng1).",
+            "infrastructureBroadStreet(ng1).",
+            "infrastructureAverageRoad(ng1).",
+            "infrastructureSmallRoads(ng1).",
+            "infrastructureWaterSupplyLocation(ng1).",
+            "infrastructurePowerSupplyLocation(ng1).",
+            "infrastructureTrafficNetwork(ng1).",
+        //Interference usage pattern
+            "interferenceUsagePatternSeparationLiving(ng1).",
+            "interferenceUsagePatternSeparationBusiness(ng1).",
+        //Spots
+            "spots(ng1).",
+        //Universal space concept
+            "universalSpaceConceptNoAnimalFarming(ng1).",
+            "universalSpaceConceptFreeSchool(ng1).",
+            "universalSpaceConceptSeminarCenter(ng1).",
+            "universalSpaceConceptFarmShop(ng1).",
+            "universalSpaceConceptWindmill(ng1).",
+            "universalSpaceConceptPhotovoltaicModule(ng1).",
+            "universalSpaceConceptCourtyard(ng1).",
+            "universalSpaceConceptStaircase(ng1).",
+            "universalSpaceConceptSpine(ng1)."
+    };
 
-        };
+    private final Integer image_ids[] = {
 
-        private final Integer image_ids[] = {
-                /*
-                R.drawable.barrieren_mehrfach_abknickende_durchgaenge,
-                R.drawable.barrieren_schleuse,
-                R.drawable.barrieren_sichtschutz,
-                R.drawable.barrieren_sperre,
-                R.drawable.baustruktur_bauwagen,
-                R.drawable.baustruktur_bestand,
-                R.drawable.baustruktur_dorfstruktur,
-                R.drawable.baustruktur_dorfstruktur_2,
-                R.drawable.baustruktur_geb_teile_ziehen_um,
-                R.drawable.baustruktur_horizontale_verdichtung,
-                R.drawable.baustruktur_landgewinnung,
-                R.drawable.baustruktur_neubau,
-                R.drawable.baustruktur_substitution,
-                R.drawable.baustruktur_substitution_2,
-                R.drawable.baustruktur_vertikale_erweiterung,
-                R.drawable.baustruktur_vertikale_erweiterung_2,
-                R.drawable.infrastruktur_baum,
-                R.drawable.infrastruktur_radweg,
-                R.drawable.infrastruktur_strasse,
-                R.drawable.infrastruktur_strasse_mittel,
-                R.drawable.infrastruktur_verkehrskonzept,
-                R.drawable.infrastruktur_wald,
-                R.drawable.infrastruktur_wald_see,
+        R.drawable.barrieren_mehrfach_abknickende_durchgaenge,
+        R.drawable.barrieren_schleuse,
+        R.drawable.barrieren_sichtschutz,
+        R.drawable.barrieren_sperre,
 
-                */
-                R.drawable.universelle_raumlehren_agrarflaeche,
-                R.drawable.universelle_raumlehren_hofladen,
-                R.drawable.universelle_raumlehren_innenhof,
-                R.drawable.universelle_raumlehren_solarpanel,
-                R.drawable.universelle_raumlehren_windrad,
-                R.drawable.universelle_raumlehren_belueftung_horiz_achse,
+        R.drawable.baustruktur_bauwagen,
+        R.drawable.baustruktur_bestand,
+        R.drawable.baustruktur_dorfstruktur,
+        R.drawable.baustruktur_geb_teile_ziehen_um,
+        R.drawable.baustruktur_horizontale_verdichtung,
+        R.drawable.baustruktur_landgewinnung,
+        R.drawable.baustruktur_neubau,
+        R.drawable.baustruktur_substitution,
+        R.drawable.baustruktur_vertikale_erw,
 
-                R.drawable.interferenz_nutzungsmuster_schule,
-                R.drawable.interferenz_nutzungsmuster_hotel_seminar,
+        R.drawable.dynamik_der_nutzergruppe_vernetzung,
 
-                R.drawable.barrieren_sichtschutz,
-                R.drawable.barrieren_mehrfach_abknickende_durchgaenge,
-        };
+        R.drawable.infrastruktur_baum,
+        R.drawable.infrastruktur_radweg,
+        R.drawable.infrastruktur_strasse,
+        R.drawable.infrastruktur_strasse_mittel,
+        R.drawable.infrastruktur_verkehrskonzept,
+        R.drawable.infrastruktur_wald,
+        R.drawable.infrastruktur_wald_see,
+        R.drawable.infrastruktur_weg,
+
+        R.drawable.interferenz_nutzungsmuster_agrar_garten,
+        R.drawable.interferenz_nutzungsmuster_atelier,
+        R.drawable.interferenz_nutzungsmuster_buero_werkstatt,
+        R.drawable.interferenz_nutzungsmuster_g_bibliothek,
+        R.drawable.interferenz_nutzungsmuster_g_partyraum,
+        R.drawable.interferenz_nutzungsmuster_gastro_restaurant,
+        R.drawable.interferenz_nutzungsmuster_gastronomie,
+        R.drawable.interferenz_nutzungsmuster_gemeinschaft,
+        R.drawable.interferenz_nutzungsmuster_gw_buero,
+        R.drawable.interferenz_nutzungsmuster_gw_werkstatt,
+        R.drawable.interferenz_nutzungsmuster_hotel_seminar,
+        R.drawable.interferenz_nutzungsmuster_schule,
+        R.drawable.interferenz_nutzungsmuster_technik,
+        R.drawable.interferenz_nutzungsmuster_th_kultur_galerie,
+        R.drawable.interferenz_nutzungsmuster_th_kultur_theater,
+        R.drawable.interferenz_nutzungsmuster_theater_kultur,
+        R.drawable.interferenz_nutzungsmuster_wohneinheit,
+
+        R.drawable.modul_dreieck,
+        R.drawable.modul_kreis,
+        R.drawable.modul_quadrat,
+        R.drawable.modul_rechteck,
+        R.drawable.modul_selbstaenlichkeit_dreieck,
+        R.drawable.modul_selbstaenlichkeit_kreis,
+        R.drawable.modul_selbstaenlichkeit_quadrat,
+        R.drawable.modul_selbstaenlichkeit_rechteck,
+
+        R.drawable.platzhalter_abbau_von_huetten,
+        R.drawable.platzhalter_baum,
+        R.drawable.platzhalter_mauer,
+        R.drawable.platzhalter_poller,
+        R.drawable.platzhalter_strasse,
+        R.drawable.platzhalter_verschattungssystem,
+        R.drawable.platzhalter_zaun,
+
+        R.drawable.spots_landmarks_sammelplatz,
+        R.drawable.spots_landmarks_technik,
+
+
+        R.drawable.universelle_raumlehren_agrarflaeche,
+        R.drawable.universelle_raumlehren_belueftung_horiz_achse,
+        R.drawable.universelle_raumlehren_belueftung_vert_achse,
+        R.drawable.universelle_raumlehren_feng_shui,
+        R.drawable.universelle_raumlehren_hofladen,
+        R.drawable.universelle_raumlehren_innenhof,
+        R.drawable.universelle_raumlehren_oekoheizung,
+        R.drawable.universelle_raumlehren_selbstversorgung,
+        R.drawable.universelle_raumlehren_solarpanel,
+        R.drawable.universelle_raumlehren_vastu_shastra,
+        R.drawable.universelle_raumlehren_vegan,
+        R.drawable.universelle_raumlehren_windrad,
+    };
 
 
     HashMap<String, HashMap<String, String>> tools;
@@ -123,8 +187,8 @@ public class Animation extends AppCompatActivity {
         } catch (Exception e) {
            Log.w("ERROR", "Error Message: ", e);
        }
-        TextView Tools = (TextView)findViewById(R.id.tv_Tools);
-        Tools.setText(tools.toString());
+        //TextView Tools = (TextView)findViewById(R.id.tv_Tools);
+        //Tools.setText(tools.toString());
 
     }
 
@@ -151,9 +215,8 @@ public class Animation extends AppCompatActivity {
     private ArrayList<Pics_Liste> prepareData(){
 
         ArrayList<Pics_Liste> theimage = new ArrayList<>();
-        for(int i = 0; i< image_titles.length; i++){
+        for(int i = 0; i< image_ids.length; i++){
             Pics_Liste createList = new Pics_Liste();
-            createList.setImage_title(image_titles[i]);
             createList.setImage_ID(image_ids[i]);
             theimage.add(createList);
         }

@@ -13,21 +13,17 @@
             android:id="@+id/btn_generate"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
             android:onClick="createAlternative"
+            android:layout_weight="1"
             android:text="HashMap" />
 
         <Button
             android:id="@+id/btn_2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:text="Bilder" />
 
@@ -35,19 +31,11 @@
             android:id="@+id/btn_continue"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
             android:onClick="goOn"
             android:text="@string/btn_submit" />
 
-        <TextView
-            android:id="@+id/tv_Tools"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Tools"/>
     </LinearLayout>
 
 
