@@ -27,7 +27,7 @@
                 android:value=".Tool_Information" />
         </activity>
         <activity
-            android:name=".Person"
+            android:name=".Number_person"
             android:parentActivityName=".Tool_Information">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

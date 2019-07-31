@@ -133,7 +133,7 @@ public class Tool_Information extends AppCompatActivity {
             Intent intent = null;
             switch (btnId){
                 case "person":
-                    intent = new Intent(this, Person.class); break;
+                    intent = new Intent(this, Number_person.class); break;
                 case "barriers":
                     intent = new Intent(this, Barriers.class); break;
                 case "building_structure":
