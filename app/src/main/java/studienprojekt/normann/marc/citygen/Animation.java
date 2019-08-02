@@ -2,20 +2,12 @@ package studienprojekt.normann.marc.citygen;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,76 +17,13 @@ import java.util.Map;
 /**
  * Created by Marc Normann on 10.04.2018.
  * Added Prolog support and rule management on 18.01.2019
+ * Pics added by Sophie Grusenick on 16.07.2019
  */
 
 public class Animation extends AppCompatActivity {
 
-    private final Integer image_ids[] = {
-
-        R.drawable.barrieren_schleuse,
-        R.drawable.barrieren_sperre,
-
-        R.drawable.baustruktur_dorfstruktur,
-        R.drawable.baustruktur_geb_teile_ziehen_um,
-        R.drawable.baustruktur_horizontale_verdichtung,
-        R.drawable.baustruktur_landgewinnung,
-        R.drawable.baustruktur_neubau,
-        R.drawable.baustruktur_substitution,
-        R.drawable.baustruktur_vertikale_erw,
-
-        R.drawable.dynamik_der_nutzergruppe_vernetzung,
-
-        R.drawable.infrastruktur_baum,
-        R.drawable.infrastruktur_wald,
-
-        R.drawable.interferenz_nutzungsmuster_agrar_garten,
-        R.drawable.interferenz_nutzungsmuster_atelier,
-        R.drawable.interferenz_nutzungsmuster_buero_werkstatt,
-        R.drawable.interferenz_nutzungsmuster_g_bibliothek,
-        R.drawable.interferenz_nutzungsmuster_g_partyraum,
-        R.drawable.interferenz_nutzungsmuster_gastro_restaurant,
-        R.drawable.interferenz_nutzungsmuster_gastronomie,
-        R.drawable.interferenz_nutzungsmuster_gemeinschaft,
-        R.drawable.interferenz_nutzungsmuster_gw_buero,
-        R.drawable.interferenz_nutzungsmuster_gw_werkstatt,
-        R.drawable.interferenz_nutzungsmuster_technik,
-        R.drawable.interferenz_nutzungsmuster_th_kultur_galerie,
-        R.drawable.interferenz_nutzungsmuster_th_kultur_theater,
-        R.drawable.interferenz_nutzungsmuster_theater_kultur,
-        R.drawable.interferenz_nutzungsmuster_wohneinheit,
-
-        R.drawable.modul_dreieck,
-        R.drawable.modul_kreis,
-        R.drawable.modul_quadrat,
-        R.drawable.modul_rechteck,
-        R.drawable.modul_selbstaenlichkeit_dreieck,
-        R.drawable.modul_selbstaenlichkeit_kreis,
-        R.drawable.modul_selbstaenlichkeit_quadrat,
-        R.drawable.modul_selbstaenlichkeit_rechteck,
-
-        R.drawable.platzhalter_abbau_von_huetten,
-        R.drawable.platzhalter_baum,
-        R.drawable.platzhalter_mauer,
-        R.drawable.platzhalter_poller,
-        R.drawable.platzhalter_strasse,
-        R.drawable.platzhalter_verschattungssystem,
-        R.drawable.platzhalter_zaun,
-
-        R.drawable.spots_landmarks_sammelplatz,
-        R.drawable.spots_landmarks_technik,
-
-        R.drawable.universelle_raumlehren_belueftung_vert_achse,
-        R.drawable.universelle_raumlehren_feng_shui,
-        R.drawable.universelle_raumlehren_oekoheizung,
-        R.drawable.universelle_raumlehren_selbstversorgung,
-        R.drawable.universelle_raumlehren_vastu_shastra,
-        R.drawable.universelle_raumlehren_vegan,
-    };
-
-
     HashMap<String, HashMap<String, String>> tools;
 
-    //private final Integer image_ids[] = {};
     /*
     private int count;
     HashMap<String, HashMap<String, String>> tools;
@@ -116,7 +45,7 @@ public class Animation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation_new_new);
+        setContentView(R.layout.activity_animation_new);
 
        try {
             Intent intent = getIntent();
@@ -132,61 +61,6 @@ public class Animation extends AppCompatActivity {
         } catch (Exception e) {
            Log.w("ERROR", "Error Message: ", e);
        }
-
-
-
-        AnalyticsTool at = new AnalyticsTool(this.getBaseContext());
-        HashMap<String, Boolean> prologSolutions = at.analyse(tools);
-        StringBuilder sb = new StringBuilder();
-        for(String rule: prologSolutions.keySet()){
-            sb.append(rule);
-            sb.append("  ");
-        }
-
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-        //Barriers
-        map.put("barriersVisualCover(ng1).",R.drawable.barrieren_sichtschutz);
-        map.put("barriersKinkingPassage(ng1).",R.drawable.barrieren_mehrfach_abknickende_durchgaenge);
-        //Building Structure
-        map.put("trailer(ng1).",R.drawable.baustruktur_bauwagen);
-        map.put("useStock(ng1).",R.drawable.baustruktur_bestand);
-        //Dynamic of user group
-        //map.put("userGroupFlexibility(ng1).","");
-        //map.put("privateRoom(ng1).","");
-        //Infrastructure
-        map.put("infrastructureStreets(ng1).",R.drawable.infrastruktur_strasse);
-        map.put("infrastructurePaths(ng1).",R.drawable.infrastruktur_weg);
-        map.put("infrastructureBicyclePath(ng1).",R.drawable.infrastruktur_radweg);
-        map.put("infrastructureWoodsAndSees(ng1).",R.drawable.infrastruktur_wald_see);
-        //map.put("infrastructureBroadStreet(ng1).","");
-        map.put("infrastructureAverageRoad(ng1).",R.drawable.infrastruktur_strasse_mittel);
-        //map.put("infrastructureSmallRoads(ng1).","");
-        //map.put("infrastructureWaterSupplyLocation(ng1).","");
-        //map.put("infrastructurePowerSupplyLocation(ng1).","");
-        map.put("infrastructureTrafficNetwork(ng1).",R.drawable.infrastruktur_verkehrskonzept);
-        //Interference usage pattern
-        //map.put("interferenceUsagePatternSeparationLiving(ng1).","");
-        //map.put("interferenceUsagePatternSeparationBusiness(ng1).","");
-        //Spots
-        //map.put("spots(ng1).","");
-        //Universal space concept
-        map.put("universalSpaceConceptNoAnimalFarming(ng1).",R.drawable.universelle_raumlehren_agrarflaeche);
-        map.put("universalSpaceConceptFreeSchool(ng1).",R.drawable.interferenz_nutzungsmuster_schule);
-        map.put("universalSpaceConceptSeminarCenter(ng1).",R.drawable.interferenz_nutzungsmuster_hotel_seminar);
-        map.put("universalSpaceConceptFarmShop(ng1).",R.drawable.universelle_raumlehren_hofladen);
-        map.put("universalSpaceConceptWindmill(ng1).",R.drawable.universelle_raumlehren_windrad);
-        map.put("universalSpaceConceptPhotovoltaicModule(ng1).",R.drawable.universelle_raumlehren_solarpanel);
-        map.put("universalSpaceConceptCourtyard(ng1).",R.drawable.universelle_raumlehren_innenhof);
-        //map.put("universalSpaceConceptStaircase(ng1).","");
-        map.put("universalSpaceConceptSpine(ng1).",R.drawable.universelle_raumlehren_belueftung_horiz_achse);
-
-        List<Integer> list = new ArrayList<Integer>();
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            if (sb.toString().contains(entry.getKey())) {
-
-                list.add(entry.getValue()); // entry.getValue() in Array packen
-            }
-        }
 
     }
 
@@ -210,14 +84,6 @@ public class Animation extends AppCompatActivity {
             Pics_Adapter adapter = new Pics_Adapter(getApplicationContext(), createLists);
             recyclerView.setAdapter(adapter);
 
-         //   ImageView Barriers = (ImageView)findViewById(R.id.pic_barriers);
-
-
-           // if (tools.toString().contains("barriers")) {
-           //   Barriers.setVisibility(View.VISIBLE);
-           // }
-
-
         }
 
         private ArrayList<Pics_Liste> prepareData(){
@@ -239,7 +105,7 @@ public class Animation extends AppCompatActivity {
             map.put("trailer(ng1).",R.drawable.baustruktur_bauwagen);
             map.put("useStock(ng1).",R.drawable.baustruktur_bestand);
             //Dynamic of user group
-            //map.put("userGroupFlexibility(ng1).","");
+            map.put("userGroupFlexibility(ng1).",R.drawable.dynamik_der_nutzergruppe_vernetzung);
             //map.put("privateRoom(ng1).","");
             //Infrastructure
             map.put("infrastructureStreets(ng1).",R.drawable.infrastruktur_strasse);
@@ -253,10 +119,10 @@ public class Animation extends AppCompatActivity {
             //map.put("infrastructurePowerSupplyLocation(ng1).","");
             map.put("infrastructureTrafficNetwork(ng1).",R.drawable.infrastruktur_verkehrskonzept);
             //Interference usage pattern
-            //map.put("interferenceUsagePatternSeparationLiving(ng1).","");
-            //map.put("interferenceUsagePatternSeparationBusiness(ng1).","");
+            map.put("interferenceUsagePatternSeparationLiving(ng1).",R.drawable.interferenz_nutzungsmuster_wohneinheit);
+            map.put("interferenceUsagePatternSeparationBusiness(ng1).",R.drawable.interferenz_nutzungsmuster_atelier);
             //Spots
-            //map.put("spots(ng1).","");
+            map.put("spots(ng1).",R.drawable.spots_landmarks_sammelplatz);
             //Universal space concept
             map.put("universalSpaceConceptNoAnimalFarming(ng1).",R.drawable.universelle_raumlehren_agrarflaeche);
             map.put("universalSpaceConceptFreeSchool(ng1).",R.drawable.interferenz_nutzungsmuster_schule);
@@ -265,14 +131,15 @@ public class Animation extends AppCompatActivity {
             map.put("universalSpaceConceptWindmill(ng1).",R.drawable.universelle_raumlehren_windrad);
             map.put("universalSpaceConceptPhotovoltaicModule(ng1).",R.drawable.universelle_raumlehren_solarpanel);
             map.put("universalSpaceConceptCourtyard(ng1).",R.drawable.universelle_raumlehren_innenhof);
-            //map.put("universalSpaceConceptStaircase(ng1).","");
+            map.put("universalSpaceConceptStaircase(ng1).",R.drawable.universelle_raumlehren_feng_shui);
             map.put("universalSpaceConceptSpine(ng1).",R.drawable.universelle_raumlehren_belueftung_horiz_achse);
 
             List<Integer> list = new ArrayList<Integer>();
-
+            // die zutreffenden Regeln werden mit dem Hash (in dem sich die Bilder befinden) verglichen
+            // alle Symbole, bei der die Regel zutrifft, werden in ein Array geschrieben
             for (Map.Entry<String, Integer> entry : map.entrySet()) {
                 if (sb.toString().contains(entry.getKey())) {
-                    list.add(entry.getValue()); // entry.getValue() in Array packen
+                    list.add(entry.getValue());
                 }
             }
             ArrayList<Pics_Liste> theimage = new ArrayList<>();

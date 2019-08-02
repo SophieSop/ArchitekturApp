@@ -118,8 +118,8 @@
     <string name="txt_sideView">Seitenansicht</string>
     <string name="txt_topView">Draufsicht</string>
     <string name="wall">Mauer</string>
-    <string name="txt_person_level">Personenanzahl</string>
+    <string name="txt_person_level">Personen</string>
     <string name="btn_person">Anzahl</string>
-    <string name="person">Wähler Sie die Personenanzahl aus:</string>
+    <string name="person">Wählen Sie die Personenanzahl aus:</string>
     <string name="tool_person">Geben Sie die Werte für das Tool Anzahl ein.</string>
 </resources>

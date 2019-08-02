@@ -59,6 +59,7 @@ moveIntoHouse(Person):-
 separation(Person,Tier).
 %Wenn Person und Tier getrennt werden sollen, dann soll Person in eine andere Wohnung ziehen.
 
+
 %Bauwagen / trailer
 trailer(X) :-
 emptySpace(X), userGroupFlexiblity(X), ( newBuilding(X); extension(X) ), networking(X), densityLow(X) , villageStructure(X).
