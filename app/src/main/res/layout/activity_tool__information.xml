@@ -77,13 +77,13 @@
                         android:layout_height="match_parent">
 
                         <CheckBox
-                            android:id="@+id/checkBox_person"
+                            android:id="@+id/checkBox_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="selectTool" />
 
                         <Button
-                            android:id="@+id/btn_person"
+                            android:id="@+id/btn_number"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3.5"
@@ -93,7 +93,7 @@
                             android:text="@string/btn_person" />
 
                         <ImageButton
-                            android:id="@+id/info_person"
+                            android:id="@+id/info_number"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
@@ -102,6 +102,95 @@
                             app:srcCompat="@android:drawable/ic_menu_manage" />
                     </TableRow>
 
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_gender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="Geschlecht" />
+
+                        <ImageButton
+                            android:id="@+id/info_gender"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_age"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="Alter" />
+
+                        <ImageButton
+                            android:id="@+id/info_age"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/checkBox_household"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="selectTool" />
+
+                        <Button
+                            android:id="@+id/btn_household"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+
+                            android:background="@android:color/background_light"
+                            android:onClick="popUp_info"
+                            android:text="Haushalt" />
+
+                        <ImageButton
+                            android:id="@+id/info_household"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:onClick="setUpTool"
+                            app:srcCompat="@android:drawable/ic_menu_manage" />
+                    </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"

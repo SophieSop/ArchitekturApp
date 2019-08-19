@@ -1,7 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CityGen</string>
     <string name="bollard">Poller</string>
-    <string name="btn_barriers">Barrieren</string>
+    <string name="btn_barriers" tools:ignore="ExtraTranslation">Barrieren</string>
     <string name="btn_building_structure">Baustruktur</string>
     <string name="btn_community_area">Bereiche für Gemeinschaft</string>
     <string name="btn_developmentarea">Entwicklungsareale</string>
@@ -122,4 +122,10 @@
     <string name="btn_person">Anzahl</string>
     <string name="person">Wählen Sie die Personenanzahl aus:</string>
     <string name="tool_person">Geben Sie die Werte für das Tool Anzahl ein.</string>
+    <string name="geschlecht">Geben Sie die Werte für das Tool Geschlecht ein.</string>
+    <string name="geschlecht2">Wählen Sie das Geschlecht aus:</string>
+    <string name="alter">Geben Sie die Werte für das Tool Alter ein.</string>
+    <string name="alter2">Wählen Sie das Alter aus:</string>
+    <string name="household">Geben Sie die Werte für das Tool Haushalt ein.</string>
+    <string name="household2">Wählen Sie einen Haushalt aus:</string>
 </resources>

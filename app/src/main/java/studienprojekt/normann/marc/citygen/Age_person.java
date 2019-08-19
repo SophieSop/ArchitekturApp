@@ -1,8 +1,8 @@
 package studienprojekt.normann.marc.citygen;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -13,20 +13,20 @@ import java.util.HashMap;
 /**
  * Updated by Sophie Grusenick on 04.07.2019
  */
-public class Number_person extends AppCompatActivity {
+public class Age_person extends AppCompatActivity {
 
     HashMap<String, HashMap<String, String>> tools = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_number);
+        setContentView(R.layout.activity_age);
 
         Intent intent = getIntent();
         tools = (HashMap<String, HashMap<String, String>>)intent.getSerializableExtra("tools");
 
         Spinner dropdown = findViewById(R.id.spinner_person);
-        String[] items = new String[]{"","1", "2", "3", "4", "5 - 10", "10 - 20", "mehr als 20"};
+        String[] items = new String[]{"","Kind", "Jugendlich", "Erwachsen"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
 /*
@@ -70,29 +70,21 @@ public class Number_person extends AppCompatActivity {
             String form ="";
 
             switch (selectedItem){
-                case "1": form = "person_1";
+                case "Kind": form = "person_1";
                     break;
-                case "2": form = "person_2";
+                case "Jugendlich": form = "person_2";
                     break;
-                case "3": form = "person_3";
-                    break;
-                case "4": form = "person_4";
-                    break;
-                case "5 - 10": form = "person_5_10";
-                    break;
-                case "10 - 20": form = "person_10_20";
-                    break;
-                case "mehr als 20": form = "person_20";
+                case "Erwachsen": form = "person_3";
                     break;
             }
-         //   tools.get("number_person").put("person", form);
+         //   tools.get("age_person").put("person", form);
 
             Intent intent = new Intent(this, Tool_Information.class);
           //  intent.putExtra("tools", tools);
             startActivity(intent);
         } else {
             TextView text = findViewById(R.id.text_person);
-            text.setText("Bitte wählen Sie eine Personenanzahl aus");
+            text.setText("Bitte wählen Sie ein Alter aus");
         }
     }
 }

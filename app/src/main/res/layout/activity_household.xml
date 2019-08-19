@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="studienprojekt.normann.marc.citygen.Modul">
+    tools:context="studienprojekt.normann.marc.citygen.Modul"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:id="@+id/information_building_structure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tool_person"
+        android:text="@string/household"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/person"
+        android:text="@string/household2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/information_building_structure" />
 
@@ -49,7 +50,7 @@
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_shape" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_person" />
 
     <Button
         android:id="@+id/btn_submit"

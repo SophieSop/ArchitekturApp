@@ -34,6 +34,27 @@
                 android:value=".Tool_Information" />
         </activity>
         <activity
+            android:name=".Age_person"
+            android:parentActivityName=".Tool_Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tool_Information" />
+        </activity>
+        <activity
+            android:name=".Gender_person"
+            android:parentActivityName=".Tool_Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tool_Information" />
+        </activity>
+        <activity
+            android:name=".Household_person"
+            android:parentActivityName=".Tool_Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tool_Information" />
+        </activity>
+        <activity
             android:name=".Barriers"
             android:parentActivityName=".Tool_Information">
             <meta-data
